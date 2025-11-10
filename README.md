@@ -5,13 +5,14 @@ A Spring Boot voting application with blockchain-inspired immutable ledger, hexa
 ## Features
 
 - **Hexagonal Architecture**: Clean separation of concerns with domain, application, infrastructure, and API layers
+  - Capable of integrating to different programming languages and ui frameworks
 - **Email-based Registration & Authentication**: Simple JWT-based authentication system
 - **CRUD Voting System**: Create, read, and participate in voting polls
 - **Blockchain-Inspired Ledger**: Immutable vote records using SHA-256 hash chaining
 - **AI Integration**: 
   - OpenAI GPT for vote description enhancement and insights
   - xAI Grok for advanced vote analysis
-- **RESTful API**: Designed for React Native/React app consumption
+- **RESTful API**: Designed for any UI framework(React Native/React/etc) app consumption
 - **API Documentation**: Interactive Swagger/OpenAPI documentation
 - **Tamper-Proof Verification**: Blockchain integrity verification endpoint
 
@@ -37,6 +38,7 @@ src/main/java/com/voting/
 │   ├── port/           # Interfaces (Repositories, Services)
 │   └── valueobject/    # Value objects (VoteRecord)
 ├── application/         # Use cases
+│   └── service/        # Service implementations
 │   └── usecase/        # Business workflows
 ├── infrastructure/      # External adapters
 │   ├── persistence/    # JPA repositories
@@ -62,7 +64,7 @@ src/main/java/com/voting/
 
 ### Environment Variables
 
-Create a `.env` file or set these environment variables:
+Create a `.env` or application.yaml file or set these environment variables:
 
 ```bash
 SESSION_SECRET=your-super-secret-jwt-key-min-32-characters
@@ -149,7 +151,7 @@ The application uses a blockchain-inspired immutable ledger:
 
 ### Running Tests
 
-The project includes comprehensive unit and integration tests covering all major components:
+The project can cater unit and integration tests to cover all major components:
 
 ```bash
 # Run all tests
@@ -196,7 +198,7 @@ curl -X POST http://localhost:8085/api/votes \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d '{
-    "title":"Favorite Programming Language",
+    "title":"Favorite Player",
     "description":"Vote for your favorite player",
     "options":["Juan Tamad"],
     "startDate":"2024-01-01T00:00:00",
@@ -250,6 +252,8 @@ For production deployments, consider:
 - Enhanced analytics dashboard
 - Multi-factor authentication
 - Vote result export functionality
+- Add unit tests
+- 
 
 ## License
 
