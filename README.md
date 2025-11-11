@@ -121,9 +121,13 @@ Once the application is running, access the interactive API documentation:
 
 #### AI Features
 - `GET /api/ai/insights/{voteId}` - Get AI-powered vote insights
+  ![voting-ai](https://github.com/user-attachments/assets/35053014-8ff6-400e-8423-e9aaa8998968)
+
 
 #### Blockchain
 - `GET /api/blockchain/verify` - Verify blockchain integrity
+  ![voting-blockchain-verify](https://github.com/user-attachments/assets/a09ff677-3416-437e-96f0-488598f4c675)
+
 
 ## Blockchain Ledger
 
@@ -146,6 +150,8 @@ The application uses a blockchain-inspired immutable ledger:
   "nonce": "1234567890"
 }
 ```
+![block](https://github.com/user-attachments/assets/62ee1fab-2fdb-441e-b267-ce41154b6633)
+
 
 ## Development
 
