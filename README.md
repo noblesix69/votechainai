@@ -263,7 +263,14 @@ For production deployments, consider:
 
 ## License
 
-This project is created for demonstration purposes. MIT License
+This repository is dedicated to the public domain under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+
+You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+
+No Copyright
+No Rights Reserved
+No Attribution Required
+For more information, see the CC0 1.0 Universal license.
 
 ## Support
 
