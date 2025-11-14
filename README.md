@@ -134,11 +134,13 @@ Once the application is running, access the interactive API documentation:
 
 #### AI Features
 - `GET /api/ai/insights/{voteId}` - Get AI-powered vote insights
+  
   ![voting-ai](https://github.com/user-attachments/assets/35053014-8ff6-400e-8423-e9aaa8998968)
 
 
 #### Blockchain
 - `GET /api/blockchain/verify` - Verify blockchain integrity
+  
   ![voting-blockchain-verify](https://github.com/user-attachments/assets/a09ff677-3416-437e-96f0-488598f4c675)
 
 
@@ -285,6 +287,3 @@ No Rights Reserved
 No Attribution Required
 For more information, see the CC0 1.0 Universal license.
 
-## Support
-
-For questions or issues, please contact noblesix41@gmail.com
