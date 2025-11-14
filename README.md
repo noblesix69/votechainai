@@ -1,6 +1,19 @@
 # Blockchain Voting Application
 
-A Spring Boot voting application with blockchain-inspired immutable ledger, hexagonal architecture, and AI capabilities.
+A Spring Boot voting application with blockchain-inspired immutable ledger and AI capabilities.
+This code will help you better understand the concept and principle of blockchain and AI. 
+The implementation of the code is as simple as follows:
+1. User will register new user using an email address(POST /api/auth/register)
+2. Create a new vote(POST /api/votes)
+3. User will then cast that vote to be included in blockchain ledger(POST /api/votes/{id}/cast)
+In addition to the above, it will also show the current status of each active votes.
+
+The above does not guarantee the correctness of any process but it will show the following:
+1. How blockchain concept works when applied into a basic CRUD process
+2. User can easily verify how the ledgerized blockchain is generated
+3. Integration of AI
+
+See below for additional info.
 
 ## Features
 
@@ -208,7 +221,7 @@ curl -X POST http://localhost:8085/api/votes \
     "description":"Vote for your favorite player",
     "options":["Juan Tamad"],
     "startDate":"2024-01-01T00:00:00",
-    "endDate":"2024-12-31T23:59:59",
+    "endDate":"2025-12-31T23:59:59",
     "useAIEnhancement":false
   }'
 ```
