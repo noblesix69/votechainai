@@ -6,7 +6,7 @@ The implementation of the code is as simple as follows:
 1. User will register new user using an email address(POST /api/auth/register)
 2. Create a new vote(POST /api/votes)
 3. User will then cast that vote to be included in blockchain ledger(POST /api/votes/{id}/cast)
-In addition to the above, it will also show the current status of each active votes.
+   In addition to the above, it will also show the current status of each active votes.
 
 The above does not guarantee the correctness of any process but it will show the following:
 1. How blockchain concept works when applied into a basic CRUD process
