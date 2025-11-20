@@ -32,6 +32,14 @@ public class AuthResponse {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	public Long getUserId() {
 		return userId;
 	}
@@ -39,6 +47,7 @@ public class AuthResponse {
 		this.userId = userId;
 	}
 	private String email;
+	private String password;
     private String name;
     private Long userId;
 }

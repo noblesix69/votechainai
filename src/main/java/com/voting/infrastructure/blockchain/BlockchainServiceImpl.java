@@ -26,6 +26,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BlockchainServiceImpl implements BlockchainService {
     
+	public BlockchainServiceImpl(BlockchainRepository blockchainRepository) {
+		this.blockchainRepository = blockchainRepository;
+	}
+	
 	@Autowired
     private BlockchainRepository blockchainRepository;
     private static final String GENESIS_HASH = "0000000000000000000000000000000000000000000000000000000000000000";

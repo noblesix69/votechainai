@@ -50,6 +50,7 @@ public class AuthController {
             AuthResponse authResponse = AuthResponse.builder()
                      .token(token)
                     .email(user.getEmail())
+                    .password(user.getPassword())
                     .name(user.getName())
                     .userId(user.getId())
                     .build();
@@ -76,6 +77,7 @@ public class AuthController {
             AuthResponse authResponse = AuthResponse.builder()
                      .token(token)
                     .email(user.getEmail())
+                    .password(user.getPassword())
                     .name(user.getName())
                     .userId(user.getId())
                     .build();

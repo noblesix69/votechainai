@@ -34,7 +34,6 @@ public class RegisterUserUseCase {
         
         User user = User.builder()
                 .email(email)
-                .password(passwordEncoder.encode(password))
                 .name(name)
                 .active(true)
                 .build();
