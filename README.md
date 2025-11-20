@@ -227,28 +227,28 @@ Runtime stage: Runs the application with minimal JRE
 ### Environment-Specific Configuration
 For production deployments, consider:
 
-Using PostgreSQL instead of H2
-Enabling HTTPS/TLS
-Implementing rate limiting
-Setting up monitoring and logging
+1. Using PostgreSQL instead of H2
+2. Enabling HTTPS/TLS
+3. Implementing rate limiting
+4. Setting up monitoring and logging
 
 ### Security Considerations
-JWT tokens expire after 24 hours (configurable)
-Passwords are hashed using BCrypt
-H2 console should be disabled in production
-API keys should be stored securely
-Implement rate limiting for production
+1. JWT tokens expire after 24 hours (configurable)
+2. Passwords are hashed using BCrypt
+3. H2 console should be disabled in production
+4. API keys should be stored securely
+5. Implement rate limiting for production
 
 ### Future Enhancements
-Migrate to PostgreSQL for production
-Add real-time updates via WebSockets
-Implement vote delegation
-Add email notifications
-Enhanced analytics dashboard
-Multi-factor authentication
-Vote result export functionality
-Add unit test cases
-Add UI to dmeonstrate the ledgerized blockchain casting of votes
+1. Migrate to PostgreSQL for production
+2. Add real-time updates via WebSockets
+3. Implement vote delegation
+4. Add email notifications
+5. Enhanced analytics dashboard
+6. Multi-factor authentication
+7. Vote result export functionality
+8. Add unit test cases
+9. Add UI to dmeonstrate the ledgerized blockchain casting of votes
 
 ### License
 This repository is dedicated to the public domain under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
