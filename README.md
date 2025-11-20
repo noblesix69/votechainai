@@ -1,32 +1,17 @@
 # Blockchain Voting Application
 
-A Spring Boot voting application with blockchain-inspired immutable ledger and AI capabilities.
-This code will help you better understand the concept and principle of blockchain and AI. 
-The implementation of the code is as simple as follows:
-1. User will register new user using an email address(POST /api/auth/register)
-2. Create a new vote(POST /api/votes)
-3. User will then cast that vote to be included in blockchain ledger(POST /api/votes/{id}/cast)
-
-In addition to the above, it will also show the current status of each active votes and ledgerized blockchain.
-
-The above does not guarantee the correctness of any process but it will show the following:
-1. How blockchain concept works when applied into a basic CRUD process
-2. User can easily verify how the ledgerized blockchain is generated
-3. Integration of AI
-
-See below for additional info.
+A Spring Boot voting application with blockchain-inspired immutable ledger, hexagonal architecture, and AI capabilities.
 
 ## Features
 
 - **Hexagonal Architecture**: Clean separation of concerns with domain, application, infrastructure, and API layers
-  - Capable of integrating to different programming languages and ui frameworks
 - **Email-based Registration & Authentication**: Simple JWT-based authentication system
 - **CRUD Voting System**: Create, read, and participate in voting polls
 - **Blockchain-Inspired Ledger**: Immutable vote records using SHA-256 hash chaining
 - **AI Integration**: 
   - OpenAI GPT for vote description enhancement and insights
   - xAI Grok for advanced vote analysis
-- **RESTful API**: Designed for any UI framework(React Native/React/etc) app consumption
+- **RESTful API**: Designed for React Native/React app consumption
 - **API Documentation**: Interactive Swagger/OpenAPI documentation
 - **Tamper-Proof Verification**: Blockchain integrity verification endpoint
 
@@ -52,7 +37,6 @@ src/main/java/com/voting/
 │   ├── port/           # Interfaces (Repositories, Services)
 │   └── valueobject/    # Value objects (VoteRecord)
 ├── application/         # Use cases
-│   └── service/        # Service implementations
 │   └── usecase/        # Business workflows
 ├── infrastructure/      # External adapters
 │   ├── persistence/    # JPA repositories
@@ -78,7 +62,7 @@ src/main/java/com/voting/
 
 ### Environment Variables
 
-Create a `.env` or application.yaml file or set these environment variables:
+Create a `.env` file or set these environment variables:
 
 ```bash
 SESSION_SECRET=your-super-secret-jwt-key-min-32-characters
@@ -135,15 +119,9 @@ Once the application is running, access the interactive API documentation:
 
 #### AI Features
 - `GET /api/ai/insights/{voteId}` - Get AI-powered vote insights
-  
-  ![voting-ai](https://github.com/user-attachments/assets/35053014-8ff6-400e-8423-e9aaa8998968)
-
 
 #### Blockchain
 - `GET /api/blockchain/verify` - Verify blockchain integrity
-  
-  ![voting-blockchain-verify](https://github.com/user-attachments/assets/a09ff677-3416-437e-96f0-488598f4c675)
-
 
 ## Blockchain Ledger
 
@@ -166,14 +144,12 @@ The application uses a blockchain-inspired immutable ledger:
   "nonce": "1234567890"
 }
 ```
-![block](https://github.com/user-attachments/assets/62ee1fab-2fdb-441e-b267-ce41154b6633)
-
 
 ## Development
 
 ### Running Tests
 
-The project can cater unit and integration tests to cover all major components:
+The project includes comprehensive unit and integration tests covering all major components:
 
 ```bash
 # Run all tests
@@ -220,11 +196,11 @@ curl -X POST http://localhost:8085/api/votes \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d '{
-    "title":"Favorite Player",
+    "title":"Favorite Programming Language",
     "description":"Vote for your favorite player",
     "options":["Juan Tamad"],
     "startDate":"2024-01-01T00:00:00",
-    "endDate":"2025-12-31T23:59:59",
+    "endDate":"2024-12-31T23:59:59",
     "useAIEnhancement":false
   }'
 ```
@@ -243,48 +219,40 @@ curl -X POST http://localhost:8085/api/votes \
 ## Deployment
 
 ### Docker Deployment
-
 The application includes a multi-stage Dockerfile optimized for production:
 
-1. Build stage: Compiles the application with Maven
-2. Runtime stage: Runs the application with minimal JRE
+Build stage: Compiles the application with Maven
+Runtime stage: Runs the application with minimal JRE
 
 ### Environment-Specific Configuration
-
 For production deployments, consider:
-- Using PostgreSQL instead of H2
-- Enabling HTTPS/TLS
-- Implementing rate limiting
-- Setting up monitoring and logging
 
-## Security Considerations
+Using PostgreSQL instead of H2
+Enabling HTTPS/TLS
+Implementing rate limiting
+Setting up monitoring and logging
 
-- JWT tokens expire after 24 hours (configurable)
-- Passwords are hashed using BCrypt
-- H2 console should be disabled in production
-- API keys should be stored securely
-- Implement rate limiting for production
+### Security Considerations
+JWT tokens expire after 24 hours (configurable)
+Passwords are hashed using BCrypt
+H2 console should be disabled in production
+API keys should be stored securely
+Implement rate limiting for production
 
-## Future Enhancements
+### Future Enhancements
+Migrate to PostgreSQL for production
+Add real-time updates via WebSockets
+Implement vote delegation
+Add email notifications
+Enhanced analytics dashboard
+Multi-factor authentication
+Vote result export functionality
+Add unit test cases
+Add UI to dmeonstrate the ledgerized blockchain casting of votes
 
-- Migrate to PostgreSQL for production
-- Add real-time updates via WebSockets
-- Implement vote delegation
-- Add email notifications
-- Enhanced analytics dashboard
-- Multi-factor authentication
-- Vote result export functionality
-- Add unit tests
-- Add UI to dmeonstrate the ledgerized blockchain casting of votes
-
-## License
-
+### License
 This repository is dedicated to the public domain under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
 
 You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
 
-No Copyright
-No Rights Reserved
-No Attribution Required
-For more information, see the CC0 1.0 Universal license.
-
+No Copyright No Rights Reserved No Attribution Required For more information, see the CC0 1.0 Universal license.
